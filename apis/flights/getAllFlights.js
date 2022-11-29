@@ -11,14 +11,15 @@ module.exports = async (req, res) => {
     );
 
     let flightService = new Flights();
-    const { from, to, dateFrom, dateTo, seatType } = req.body;
+    const { from, to, dateFrom, dateTo, seatType, passengers } = req.body;
 
     const result = await flightService.getAllFlights(
       from,
       to,
       dateFrom,
       dateTo,
-      seatType
+      seatType,
+      passengers
     );
 
     logger.info(

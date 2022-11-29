@@ -28,10 +28,6 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.DATEONLY,
         // defaultValue: new Date(),
       },
-      lastUpdate: {
-        type: Sequelize.DATEONLY,
-        // defaultValue: new Date(),
-      },
     },
     {
       freezeTableName: true,

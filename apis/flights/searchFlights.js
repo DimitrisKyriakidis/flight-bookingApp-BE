@@ -2,7 +2,7 @@ const logger = require("../../Logger/winstonLogger").logger;
 const loggingPolicy = require("../../Logger/loggingPolicy").loggingPolicy;
 const paginator = require("../../utils/paginator");
 const Flights = require("../../services/flightsService").Flights;
-const apiName = "getAllFlights";
+const apiName = "searchFlights";
 
 module.exports = async (req, res) => {
   try {
@@ -11,14 +11,22 @@ module.exports = async (req, res) => {
     );
 
     let flightService = new Flights();
+    const { from, to, dateFrom, dateTo, seatType, passengers } = req.body;
 
-    const result = await flightService.getAllFlights();
+    const result = await flightService.searchFlights(
+      from,
+      to,
+      dateFrom,
+      dateTo,
+      seatType,
+      passengers
+    );
 
     logger.info(
       `Code: ${loggingPolicy.successResponse.code},  ${apiName}  ${loggingPolicy.successResponse.message}`
     );
     res.status(200).send({
-      message: "Flights retrived!!",
+      message: "Flights with filters applied!!",
       data: result,
     });
   } catch (err) {

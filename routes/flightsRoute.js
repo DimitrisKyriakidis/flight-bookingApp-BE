@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const routeName = "/api/flights";
 
-router.post("/getAllFlights", require("../apis/flights/getAllFlights"));
+router.get("/getAllFlights", require("../apis/flights/getAllFlights"));
+router.post("/searchFlights", require("../apis/flights/searchFlights"));
 
 module.exports = { routeName, router };

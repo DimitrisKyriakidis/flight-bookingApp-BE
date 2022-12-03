@@ -1,11 +1,16 @@
 const uuid = require("uuid").v4;
 const Models = require("../database/DB").Models;
 const Op = require("sequelize").Op;
+const { Model } = require("sequelize");
 const Sequelize = require("sequelize");
 const { sequelize } = require("../database/DB");
 
 class Flights {
-  async getAllFlights(from, to, dateFrom, dateTo, seatType, passengers) {
+  async getAllFlights() {
+    return await Models.Flights.findAll({});
+  }
+
+  async searchFlights(from, to, dateFrom, dateTo, seatType, passengers) {
     let rangeOptions = {
       from: {
         [Op.eq]: from,

@@ -28,6 +28,18 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.DATEONLY,
         // defaultValue: new Date(),
       },
+      price: {
+        type: Sequelize.FLOAT,
+        allowNull: true,
+      },
+      company: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      duration: {
+        type: Sequelize.FLOAT,
+        allowNull: true,
+      },
     },
     {
       freezeTableName: true,

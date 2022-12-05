@@ -5,6 +5,9 @@ module.exports = [
     to: "athens",
     dateFrom: "2022-11-28",
     dateTo: "2022-12-14",
+    price: 110,
+    company: "Aegean",
+    duration: 40,
   },
 
   {
@@ -13,6 +16,9 @@ module.exports = [
     to: "athens",
     dateFrom: "2022-10-11",
     dateTo: "2022-10-15",
+    price: 90,
+    company: "Ryanair",
+    duration: 40,
   },
 
   {
@@ -21,6 +27,9 @@ module.exports = [
     to: "athens",
     dateFrom: "2022-10-13",
     dateTo: "2022-10-16",
+    price: 75,
+    company: "Ryanair",
+    duration: 40,
   },
 
   {
@@ -29,22 +38,31 @@ module.exports = [
     to: "athens",
     dateFrom: "2022-10-15",
     dateTo: "2022-10-18",
+    price: 120,
+    company: "Aegean",
+    duration: 40,
   },
 
   {
     id: "vtr34",
-    from: "thessaloniki",
-    to: "paris",
+    from: "madrid",
+    to: "rome",
     dateFrom: "2022-10-15",
     dateTo: "2022-10-18",
+    price: 140,
+    company: "Volotea",
+    duration: 2,
   },
 
   {
     id: "tr5473",
-    from: "thessaloniki",
-    to: "paris",
-    dateFrom: "2022-10-15",
-    dateTo: "2022-10-18",
+    from: "madrid",
+    to: "rome",
+    dateFrom: "2022-10-18",
+    dateTo: "2022-10-28",
+    price: 130,
+    company: "Iberia",
+    duration: 2,
   },
 
   {
@@ -53,6 +71,9 @@ module.exports = [
     to: "berlin",
     dateFrom: "2022-01-25",
     dateTo: "2022-01-29",
+    price: 150,
+    company: "Eurowings",
+    duration: 3,
   },
   {
     id: "gu53356",
@@ -60,6 +81,9 @@ module.exports = [
     to: "berlin",
     dateFrom: "2022-10-19",
     dateTo: "2022-10-22",
+    price: 180,
+    company: "Lufthansa",
+    duration: 3,
   },
 
   {
@@ -68,6 +92,9 @@ module.exports = [
     to: "berlin",
     dateFrom: "2022-10-20",
     dateTo: "2022-10-24",
+    price: 200,
+    company: "Aegean",
+    duration: 3,
   },
 
   {
@@ -76,6 +103,9 @@ module.exports = [
     to: "rome",
     dateFrom: "2022-10-11",
     dateTo: "2022-10-19",
+    price: 210,
+    company: "Lufthansa",
+    duration: 2,
   },
 
   {
@@ -84,5 +114,8 @@ module.exports = [
     to: "rome",
     dateFrom: "2022-10-11",
     dateTo: "2022-10-19",
+    price: 185,
+    company: "Aegean",
+    duration: 2,
   },
 ];

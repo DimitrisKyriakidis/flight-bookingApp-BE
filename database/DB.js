@@ -73,7 +73,7 @@ DB.initDB = async () => {
     console.log("..DB Syncing");
 
     await DB.sequelize.sync({
-      force: true,
+      force: false,
       logging: false,
       //alter: true,
     });
@@ -82,7 +82,7 @@ DB.initDB = async () => {
     DB.isConnected = true;
 
     //Load Seeds
-    await DB.initSeeds();
+    // await DB.initSeeds();
   } catch (err) {
     throw err.message || err;
   }

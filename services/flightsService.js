@@ -60,12 +60,6 @@ class Flights {
       };
     }
 
-    // let sqlQueryForSeats = `SELECT * FROM SEATS WHERE type = '${seatType}'`;
-
-    // let runQuery = await sequelize.query(sqlQueryForSeats);
-
-    //add seat filter type on each flight
-    //from the front end by default should for example ("economical")
     let allFlights = await Models.Flights.findAll({
       where: {
         ...rangeOptions,
@@ -81,10 +75,12 @@ class Flights {
 
       const { count: availableSeats } = seats;
       for (let seat of seats.rows) {
-        if (seat.flight_id === flight.id && !!availableSeats >= !!passengers) {
-          flight.setDataValue("seats", seats);
-          flight.setDataValue("availableSeats", availableSeats);
-        }
+        if (availableSeats >= passengers) {
+          if (seat.flight_id === flight.id) {
+            flight.setDataValue("seats", seats);
+            flight.setDataValue("availableSeats", availableSeats);
+          }
+        } else return (allFlights = []);
       }
     }
     return allFlights;

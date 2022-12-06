@@ -40,6 +40,10 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.FLOAT,
         allowNull: true,
       },
+      image: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
     },
     {
       freezeTableName: true,

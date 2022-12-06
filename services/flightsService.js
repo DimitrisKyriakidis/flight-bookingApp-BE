@@ -10,7 +10,7 @@ class Flights {
     return await Models.Flights.findAll({});
   }
 
-  async searchFlights(from, to, dateFrom, dateTo, seatType, passengers) {
+  async searchFlights(from, to, dateFrom, dateTo, seatType, passengers, sort) {
     let rangeOptions = {
       from: {
         [Op.eq]: from,
@@ -64,6 +64,7 @@ class Flights {
       where: {
         ...rangeOptions,
       },
+      order: sort,
     });
     for (let flight of allFlights) {
       const seats = await Models.Seats.findAndCountAll({
@@ -77,7 +78,7 @@ class Flights {
       for (let seat of seats.rows) {
         if (availableSeats >= passengers) {
           if (seat.flight_id === flight.id) {
-            flight.setDataValue("seats", seats);
+            flight.setDataValue("seats", seats.rows);
             flight.setDataValue("availableSeats", availableSeats);
           }
         } else return (allFlights = []);

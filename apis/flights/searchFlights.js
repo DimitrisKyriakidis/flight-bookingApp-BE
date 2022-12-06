@@ -9,6 +9,7 @@ module.exports = async (req, res) => {
     logger.info(
       `Code: ${loggingPolicy.functionEnter.code}  ${apiName}  ${loggingPolicy.functionEnter.message}`
     );
+    let pagination = paginator([], "price", req.query);
 
     let flightService = new Flights();
     const { from, to, dateFrom, dateTo, seatType, passengers } = req.body;
@@ -19,7 +20,8 @@ module.exports = async (req, res) => {
       dateFrom,
       dateTo,
       seatType,
-      passengers
+      passengers,
+      pagination.sort
     );
 
     logger.info(

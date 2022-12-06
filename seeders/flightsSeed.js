@@ -8,6 +8,8 @@ module.exports = [
     price: 110,
     company: "Aegean",
     duration: 40,
+    image:
+      "http://1000marcas.net/wp-content/uploads/2020/07/Aegean-Airlines-logo.png",
   },
 
   {
@@ -19,6 +21,8 @@ module.exports = [
     price: 90,
     company: "Ryanair",
     duration: 40,
+    image:
+      "https://logos-world.net/wp-content/uploads/2020/03/Ryanair-Logo.png",
   },
 
   {
@@ -30,6 +34,8 @@ module.exports = [
     price: 75,
     company: "Ryanair",
     duration: 40,
+    image:
+      "https://logos-world.net/wp-content/uploads/2020/03/Ryanair-Logo.png",
   },
 
   {
@@ -41,6 +47,8 @@ module.exports = [
     price: 120,
     company: "Aegean",
     duration: 40,
+    image:
+      "http://1000marcas.net/wp-content/uploads/2020/07/Aegean-Airlines-logo.png",
   },
 
   {
@@ -52,6 +60,8 @@ module.exports = [
     price: 140,
     company: "Volotea",
     duration: 2,
+    image:
+      "http://www.nycaviation.com/newspage/wp-content/uploads/2012/02/volotea-logo-630-620x413.jpg",
   },
 
   {
@@ -63,6 +73,7 @@ module.exports = [
     price: 130,
     company: "Iberia",
     duration: 2,
+    image: "http://graffica.info/wp-content/uploads/logo-iberia1.png",
   },
 
   {
@@ -74,6 +85,8 @@ module.exports = [
     price: 150,
     company: "Eurowings",
     duration: 3,
+    image:
+      "https://i.pinimg.com/originals/36/0d/3e/360d3ed6a199e09536a7494a19baf191.jpg",
   },
   {
     id: "gu53356",
@@ -84,6 +97,8 @@ module.exports = [
     price: 180,
     company: "Lufthansa",
     duration: 3,
+    image:
+      "https://www.logolynx.com/images/logolynx/1f/1f80ab55e6b94fe3d258c3af35169f8c.jpeg",
   },
 
   {
@@ -95,6 +110,8 @@ module.exports = [
     price: 200,
     company: "Aegean",
     duration: 3,
+    image:
+      "http://1000marcas.net/wp-content/uploads/2020/07/Aegean-Airlines-logo.png",
   },
 
   {
@@ -106,6 +123,8 @@ module.exports = [
     price: 210,
     company: "Lufthansa",
     duration: 2,
+    image:
+      "https://www.logolynx.com/images/logolynx/1f/1f80ab55e6b94fe3d258c3af35169f8c.jpeg",
   },
 
   {
@@ -117,5 +136,7 @@ module.exports = [
     price: 185,
     company: "Aegean",
     duration: 2,
+    image:
+      "http://1000marcas.net/wp-content/uploads/2020/07/Aegean-Airlines-logo.png",
   },
 ];

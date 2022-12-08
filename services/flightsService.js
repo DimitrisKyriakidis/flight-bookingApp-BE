@@ -4,6 +4,7 @@ const Op = require("sequelize").Op;
 const { Model } = require("sequelize");
 const Sequelize = require("sequelize");
 const { sequelize } = require("../database/DB");
+const seats = require("../models/seats");
 
 class Flights {
   async getAllFlights() {
@@ -85,6 +86,63 @@ class Flights {
       }
     }
     return allFlights;
+  }
+
+  async saveFlight(body) {
+    // console.log("passengers", passengers);
+    // console.log("filters", filters);
+    let passengersModels = body.passengers.forEach(async (element) => {
+      await Models.Passengers.create({
+        firstName: element.firstName,
+        lastName: element.lastName,
+        gender: element.gender,
+        birthDate: element.birthDate,
+        flight_id: body.filters.id, //flight id
+      });
+    });
+
+    let seats = await Models.Seats.findAll({
+      where: {
+        type: body.filters.seatType,
+        flight_id: body.filters.id,
+      },
+      limit: body.passengers.length,
+    }).then((results) => {
+      console.log("results", results);
+      results = results.map((res) => res.id);
+      results.forEach(async (seatId) => {
+        await Models.Seats.destroy({
+          where: {
+            id: seatId,
+          },
+        });
+      });
+    });
+    // for(let seat of seats){
+
+    // }
+    console.log("seats", seats);
+    console.log("passengersLength=", body.passengers.length);
+    // let allSeats = await Models.Seats.findAndCountAll({});
+    // console.log("seats=", allSeats.count);
+    // for (let i = 0; i < body.passengers.length; i++) {
+    //   if (i < body.passengers.length) {
+    //     seats = await Models.Seats.destroy({
+    //       where: {
+    //         type: body.filters.seatType,
+    //         flight_id: body.filters.id,
+    //       },
+    //     });
+    //   }
+    // }
+
+    //  if(seats.length === 0){
+    //   await Models.Flights.destroy({
+    //     where:{
+    //       id:body.filters.id
+    //     }
+    //   })
+    //  }
   }
 }
 

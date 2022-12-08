@@ -21,7 +21,7 @@ DB.Models = {
   Flights: require("../models/flights")(DB.sequelize, Sequelize),
   Passengers: require("../models/passengers")(DB.sequelize, Sequelize),
   Seats: require("../models/seats")(DB.sequelize, Sequelize),
-  SeatType: require("../models/seatTypes")(DB.sequelize, Sequelize),
+  // SeatType: require("../models/seatTypes")(DB.sequelize, Sequelize),
 };
 
 //Seeds Loader
@@ -73,7 +73,7 @@ DB.initDB = async () => {
     console.log("..DB Syncing");
 
     await DB.sequelize.sync({
-      force: true,
+      force: false,
       logging: false,
       //alter: true,
     });
@@ -82,7 +82,7 @@ DB.initDB = async () => {
     DB.isConnected = true;
 
     //Load Seeds
-    await DB.initSeeds();
+    //await DB.initSeeds();
   } catch (err) {
     throw err.message || err;
   }

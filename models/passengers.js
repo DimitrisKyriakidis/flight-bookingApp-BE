@@ -11,10 +11,24 @@ module.exports = (sequelize, Sequelize) => {
         defaultValue: Sequelize.UUIDV4,
         primaryKey: true,
       },
-      amount_of_passengers: {
-        type: Sequelize.INTEGER,
+      firstName: {
+        type: Sequelize.STRING,
         allowNull: true,
       },
+      lastName: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      gender: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+
+      birthDate: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+
       flight_id: {
         type: Sequelize.STRING,
         allowNull: true,

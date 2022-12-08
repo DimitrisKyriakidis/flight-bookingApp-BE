@@ -32,11 +32,11 @@ module.exports = (sequelize, Sequelize) => {
       foreignKey: "flight_id",
       sourceKey: "id",
     });
-    seats.belongsTo(Models.SeatType, {
-      as: "seatType",
-      foreignKey: "seat_id",
-      sourceKey: "id",
-    });
+    // seats.belongsTo(Models.SeatType, {
+    //   as: "seatType",
+    //   foreignKey: "seat_id",
+    //   sourceKey: "id",
+    // });
   };
 
   seats.seedData = async () => {

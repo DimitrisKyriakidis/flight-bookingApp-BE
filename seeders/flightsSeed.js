@@ -1,8 +1,8 @@
 module.exports = [
   {
     id: "cc356667",
-    from: "thessaloniki",
-    to: "athens",
+    from: "Thessaloniki",
+    to: "Athens",
     dateFrom: "2022-11-28",
     dateTo: "2022-12-14",
     price: 110,
@@ -14,8 +14,8 @@ module.exports = [
 
   {
     id: "grt45654",
-    from: "thessaloniki",
-    to: "athens",
+    from: "Thessaloniki",
+    to: "Athens",
     dateFrom: "2022-10-11",
     dateTo: "2022-10-15",
     price: 90,
@@ -27,8 +27,8 @@ module.exports = [
 
   {
     id: "j4563",
-    from: "thessaloniki",
-    to: "athens",
+    from: "Thessaloniki",
+    to: "Athens",
     dateFrom: "2022-10-13",
     dateTo: "2022-10-16",
     price: 75,
@@ -40,8 +40,8 @@ module.exports = [
 
   {
     id: "r654wt",
-    from: "thessaloniki",
-    to: "athens",
+    from: "Thessaloniki",
+    to: "Athens",
     dateFrom: "2022-10-15",
     dateTo: "2022-10-18",
     price: 120,
@@ -53,8 +53,8 @@ module.exports = [
 
   {
     id: "vtr34",
-    from: "madrid",
-    to: "rome",
+    from: "Madrid",
+    to: "Rome",
     dateFrom: "2022-10-15",
     dateTo: "2022-10-18",
     price: 140,
@@ -66,8 +66,8 @@ module.exports = [
 
   {
     id: "tr5473",
-    from: "madrid",
-    to: "rome",
+    from: "Madrid",
+    to: "Rome",
     dateFrom: "2022-10-18",
     dateTo: "2022-10-28",
     price: 130,
@@ -75,11 +75,36 @@ module.exports = [
     duration: 2,
     image: "http://graffica.info/wp-content/uploads/logo-iberia1.png",
   },
+  {
+    id: "cwe24657",
+    from: "Madrid",
+    to: "Athens",
+    dateFrom: "2022-10-15",
+    dateTo: "2022-10-18",
+    price: 90,
+    company: "Volotea",
+    duration: 3,
+    image:
+      "http://www.nycaviation.com/newspage/wp-content/uploads/2012/02/volotea-logo-630-620x413.jpg",
+  },
+
+  {
+    id: "ay432r",
+    from: "Madrid",
+    to: "Berlin",
+    dateFrom: "2022-10-15",
+    dateTo: "2022-10-18",
+    price: 140,
+    company: "Volotea",
+    duration: 4,
+    image:
+      "https://i.pinimg.com/originals/36/0d/3e/360d3ed6a199e09536a7494a19baf191.jpg",
+  },
 
   {
     id: "fe24563",
-    from: "paris",
-    to: "berlin",
+    from: "Paris",
+    to: "Berlin",
     dateFrom: "2022-01-25",
     dateTo: "2022-01-29",
     price: 150,
@@ -90,8 +115,8 @@ module.exports = [
   },
   {
     id: "gu53356",
-    from: "paris",
-    to: "berlin",
+    from: "Paris",
+    to: "Berlin",
     dateFrom: "2022-10-19",
     dateTo: "2022-10-22",
     price: 180,
@@ -103,8 +128,8 @@ module.exports = [
 
   {
     id: "jo3423",
-    from: "paris",
-    to: "berlin",
+    from: "Paris",
+    to: "Berlin",
     dateFrom: "2022-10-20",
     dateTo: "2022-10-24",
     price: 200,
@@ -115,9 +140,22 @@ module.exports = [
   },
 
   {
+    id: "nrt942",
+    from: "Paris",
+    to: "Rome",
+    dateFrom: "2022-10-19",
+    dateTo: "2022-10-22",
+    price: 170,
+    company: "Eurowings",
+    duration: 3,
+    image:
+      "https://i.pinimg.com/originals/36/0d/3e/360d3ed6a199e09536a7494a19baf191.jpg",
+  },
+
+  {
     id: "wet546",
-    from: "madrid",
-    to: "rome",
+    from: "Madrid",
+    to: "Rome",
     dateFrom: "2022-10-11",
     dateTo: "2022-10-19",
     price: 210,
@@ -129,8 +167,8 @@ module.exports = [
 
   {
     id: "by4456",
-    from: "madrid",
-    to: "rome",
+    from: "Madrid",
+    to: "Rome",
     dateFrom: "2022-10-11",
     dateTo: "2022-10-19",
     price: 185,

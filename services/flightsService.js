@@ -95,10 +95,10 @@ class Flights {
   async saveFlight(body) {
     let passengersModels = body.passengers.forEach(async (element) => {
       await Models.Passengers.create({
-        firstName: element.firstName,
-        lastName: element.lastName,
-        gender: element.gender,
-        birthDate: element.birthDate,
+        firstName: element.firstName ? element.firstName : null,
+        lastName: element.lastName ? element.lastName : null,
+        gender: element.gender ? element.gender : null,
+        birthDate: element.birthDate ? element.birthDate : null,
         flight_id: body.filters.id, //flight id
       });
     });

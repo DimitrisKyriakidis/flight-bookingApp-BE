@@ -67,17 +67,7 @@ module.exports = (sequelize, Sequelize) => {
   flights.seedData = async () => {
     let seedData = await require("../seeders/flightsSeed");
     let currentDate = new Date();
-    let oneBeforeCurrent = new Date();
-    let fourBeforeCurrent = new Date();
     let newDate = new Date();
-
-    // console.log("currentDate=", currentDate);
-    // oneBeforeCurrent.setDate(oneBeforeCurrent.getDate() - 1);
-    // fourBeforeCurrent.setDate(fourBeforeCurrent.getDate() - 4);
-    // console.log("1-Current=", oneBeforeCurrent);
-    // console.log("newDate=", newDate.toJSON().substring(0, 10));
-    // // newDate.setDate(currentDate.getDate() + 5);
-    // console.log("currentDate=", currentDate.toJSON().substring(0, 10));
 
     seedData = seedData.map((el) => {
       if (el.id === "cc356667") {
@@ -160,6 +150,30 @@ module.exports = (sequelize, Sequelize) => {
           ...el,
           dateFrom: newDate.setDate(currentDate.getDate() + 7),
           dateTo: newDate.setDate(currentDate.getDate() + 10),
+        };
+      }
+
+      if (el.id === "cwe24657") {
+        return {
+          ...el,
+          dateFrom: newDate.setDate(currentDate.getDate() + 2),
+          dateTo: newDate.setDate(currentDate.getDate() + 6),
+        };
+      }
+
+      if (el.id === "ay432r") {
+        return {
+          ...el,
+          dateFrom: currentDate.toJSON().substring(0, 10),
+          dateTo: newDate.setDate(currentDate.getDate() + 3),
+        };
+      }
+
+      if (el.id === "nrt942") {
+        return {
+          ...el,
+          dateFrom: newDate.setDate(currentDate.getDate() + 2),
+          dateTo: newDate.setDate(currentDate.getDate() + 6),
         };
       }
 

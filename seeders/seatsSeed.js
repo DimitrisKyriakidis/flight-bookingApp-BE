@@ -530,4 +530,104 @@ module.exports = [
     type: "economy",
     flight_id: "by4456",
   },
+
+  {
+    type: "premium",
+    flight_id: "cwe24657",
+  },
+  {
+    type: "premium",
+    flight_id: "cwe24657",
+  },
+
+  {
+    type: "economy",
+    flight_id: "cwe24657",
+  },
+  {
+    type: "economy",
+    flight_id: "cwe24657",
+  },
+  {
+    type: "economy",
+    flight_id: "cwe24657",
+  },
+  {
+    type: "economy",
+    flight_id: "cwe24657",
+  },
+
+  {
+    type: "premium",
+    flight_id: "ay432r",
+  },
+  {
+    type: "premium",
+    flight_id: "ay432r",
+  },
+
+  {
+    type: "economy",
+    flight_id: "ay432r",
+  },
+  {
+    type: "economy",
+    flight_id: "ay432r",
+  },
+  {
+    type: "economy",
+    flight_id: "ay432r",
+  },
+  {
+    type: "economy",
+    flight_id: "ay432r",
+  },
+
+  {
+    type: "premium",
+    flight_id: "nrt942",
+  },
+
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+
+  {
+    type: "premium",
+    flight_id: "nrt942",
+  },
+  {
+    type: "premium",
+    flight_id: "nrt942",
+  },
+
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
+  {
+    type: "economy",
+    flight_id: "nrt942",
+  },
 ];

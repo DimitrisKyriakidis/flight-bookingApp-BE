@@ -76,8 +76,12 @@ class Flights {
       });
 
       const { count: availableSeats } = seats;
+      console.log("availableSeats=", availableSeats);
+      if (availableSeats === 0) {
+        flight.setDataValue("availableSeats", 0);
+      }
       for (let seat of seats.rows) {
-        if (availableSeats >= passengers) {
+        if (availableSeats > 0 && availableSeats >= passengers) {
           if (seat.flight_id === flight.id) {
             flight.setDataValue("seats", seats.rows);
             flight.setDataValue("availableSeats", availableSeats);
@@ -89,8 +93,6 @@ class Flights {
   }
 
   async saveFlight(body) {
-    // console.log("passengers", passengers);
-    // console.log("filters", filters);
     let passengersModels = body.passengers.forEach(async (element) => {
       await Models.Passengers.create({
         firstName: element.firstName,
@@ -108,41 +110,15 @@ class Flights {
       },
       limit: body.passengers.length,
     }).then((results) => {
-      console.log("results", results);
       results = results.map((res) => res.id);
-      results.forEach(async (seatId) => {
+      results.forEach(async (id) => {
         await Models.Seats.destroy({
           where: {
-            id: seatId,
+            id: id,
           },
         });
       });
     });
-    // for(let seat of seats){
-
-    // }
-    console.log("seats", seats);
-    console.log("passengersLength=", body.passengers.length);
-    // let allSeats = await Models.Seats.findAndCountAll({});
-    // console.log("seats=", allSeats.count);
-    // for (let i = 0; i < body.passengers.length; i++) {
-    //   if (i < body.passengers.length) {
-    //     seats = await Models.Seats.destroy({
-    //       where: {
-    //         type: body.filters.seatType,
-    //         flight_id: body.filters.id,
-    //       },
-    //     });
-    //   }
-    // }
-
-    //  if(seats.length === 0){
-    //   await Models.Flights.destroy({
-    //     where:{
-    //       id:body.filters.id
-    //     }
-    //   })
-    //  }
   }
 }
 

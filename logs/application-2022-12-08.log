@@ -292,3 +292,14 @@
 2022-12-08T00:28:30.792Z [info] : 	Code: HTTP200,  searchFlights  Successful response
 2022-12-08T00:28:30.864Z [info] : 	Code: F100  getAllFlights  Function Called
 2022-12-08T00:28:30.872Z [info] : 	Code: HTTP200,  getAllFlights  Successful response
+2022-12-08T00:38:21.321Z [info] : 	Code: F100 login Function Called
+2022-12-08T00:38:21.544Z [info] : 	Code: F100  getAllFlights  Function Called
+2022-12-08T00:38:21.556Z [info] : 	Code: HTTP200,  getAllFlights  Successful response
+2022-12-08T00:38:34.524Z [info] : 	Code: F100  searchFlights  Function Called
+2022-12-08T00:38:34.544Z [info] : 	Code: HTTP200,  searchFlights  Successful response
+2022-12-08T00:38:34.577Z [info] : 	Code: F100  getAllFlights  Function Called
+2022-12-08T00:38:34.581Z [info] : 	Code: F100  searchFlights  Function Called
+2022-12-08T00:38:34.586Z [info] : 	Code: HTTP200,  getAllFlights  Successful response
+2022-12-08T00:38:34.593Z [info] : 	Code: HTTP200,  searchFlights  Successful response
+2022-12-08T00:38:38.764Z [info] : 	Code: F100  searchFlights  Function Called
+2022-12-08T00:38:38.774Z [info] : 	Code: HTTP200,  searchFlights  Successful response

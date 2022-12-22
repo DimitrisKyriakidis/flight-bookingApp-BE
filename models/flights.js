@@ -64,116 +64,122 @@ module.exports = (sequelize, Sequelize) => {
     });
   };
 
+  const addDays = (days) => {
+    const currentDate = new Date();
+    const resultDays = currentDate.setDate(currentDate.getDate() + days);
+    return resultDays;
+  };
+
   flights.seedData = async () => {
     let seedData = await require("../seeders/flightsSeed");
-    let currentDate = new Date();
-    let newDate = new Date();
+
+    const now = new Date();
 
     seedData = seedData.map((el) => {
       if (el.id === "cc356667") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 5),
+          dateFrom: now,
+          dateTo: addDays(2),
         };
       }
       if (el.id === "grt45654") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 7),
+          dateFrom: now,
+          dateTo: addDays(7),
         };
       }
       if (el.id === "j4563") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 7),
+          dateFrom: now,
+          dateTo: addDays(7),
         };
       }
       if (el.id === "r654wt") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 12),
-          dateTo: newDate.setDate(currentDate.getDate() + 19),
+          dateFrom: addDays(3),
+          dateTo: addDays(8),
         };
       }
 
       if (el.id === "vtr34") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 8),
-          dateTo: newDate.setDate(currentDate.getDate() + 13),
+          dateFrom: addDays(12),
+          dateTo: addDays(16),
         };
       }
 
       if (el.id === "tr5473") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 3),
-          dateTo: newDate.setDate(currentDate.getDate() + 7),
+          dateFrom: addDays(2),
+          dateTo: addDays(9),
         };
       }
 
       if (el.id === "fe24563") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 4),
-          dateTo: newDate.setDate(currentDate.getDate() + 8),
+          dateFrom: addDays(4),
+          dateTo: addDays(8),
         };
       }
       if (el.id === "gu53356") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 4),
+          dateFrom: now,
+          dateTo: addDays(4),
         };
       }
       if (el.id === "jo3423") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 2),
+          dateFrom: now,
+          dateTo: addDays(2),
         };
       }
 
       if (el.id === "wet546") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 3),
+          dateFrom: now,
+          dateTo: addDays(3),
         };
       }
 
       if (el.id === "by4456") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 7),
-          dateTo: newDate.setDate(currentDate.getDate() + 10),
+          dateFrom: addDays(6),
+          dateTo: addDays(11),
         };
       }
 
       if (el.id === "cwe24657") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 2),
-          dateTo: newDate.setDate(currentDate.getDate() + 6),
+          dateFrom: addDays(1),
+          dateTo: addDays(6),
         };
       }
 
       if (el.id === "ay432r") {
         return {
           ...el,
-          dateFrom: currentDate.toJSON().substring(0, 10),
-          dateTo: newDate.setDate(currentDate.getDate() + 3),
+          dateFrom: now,
+          dateTo: addDays(3),
         };
       }
 
       if (el.id === "nrt942") {
         return {
           ...el,
-          dateFrom: newDate.setDate(currentDate.getDate() + 2),
-          dateTo: newDate.setDate(currentDate.getDate() + 6),
+          dateFrom: addDays(2),
+          dateTo: addDays(12),
         };
       }
 

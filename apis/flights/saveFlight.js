@@ -12,8 +12,6 @@ module.exports = async (req, res) => {
 
     let flightService = new Flights();
 
-    // const {filters,passengers} = req.body
-
     const result = await flightService.saveFlight(req.body);
 
     logger.info(

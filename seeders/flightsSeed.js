@@ -19,10 +19,10 @@ module.exports = [
     dateFrom: "2022-10-11",
     dateTo: "2022-10-15",
     price: 90,
-    company: "Ryanair",
+    company: "Eurowings",
     duration: 40,
     image:
-      "https://logos-world.net/wp-content/uploads/2020/03/Ryanair-Logo.png",
+      "https://i.pinimg.com/originals/36/0d/3e/360d3ed6a199e09536a7494a19baf191.jpg",
   },
 
   {

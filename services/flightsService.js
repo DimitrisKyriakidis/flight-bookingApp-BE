@@ -28,7 +28,6 @@ class Flights {
     } else if (from && to && dateFrom && dateTo) {
       rangeOptions = {
         ...rangeOptions,
-
         dateFrom: {
           [Op.and]: {
             [Op.gte]: dateFrom,
@@ -46,7 +45,6 @@ class Flights {
     } else if (from && to && dateFrom && !dateTo) {
       rangeOptions = {
         ...rangeOptions,
-
         dateFrom: {
           [Op.gte]: dateFrom,
         },
@@ -54,7 +52,6 @@ class Flights {
     } else if (from && to && dateTo && !dateFrom) {
       rangeOptions = {
         ...rangeOptions,
-
         dateTo: {
           [Op.lte]: dateTo,
         },
@@ -76,7 +73,7 @@ class Flights {
       });
 
       const { count: availableSeats } = seats;
-      console.log("availableSeats=", availableSeats);
+
       if (availableSeats === 0) {
         flight.setDataValue("availableSeats", 0);
       }
@@ -103,6 +100,7 @@ class Flights {
       });
     });
 
+    //find as much seats as the passengers length and delete these seats since they are booked from passengers
     let seats = await Models.Seats.findAll({
       where: {
         type: body.filters.seatType,
